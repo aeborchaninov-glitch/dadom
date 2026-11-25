@@ -1,0 +1,1 @@
+export const company = { name:"ДаДом", legalName:null as string|null, phone:null as string|null, email:null as string|null, officeAddress:null as string|null, region:"Екатеринбург и Уральский регион", telegram:null as string|null, whatsapp:null as string|null, requisites:null as string|null, socialLinks:[] as {label:string; href:string}[] };

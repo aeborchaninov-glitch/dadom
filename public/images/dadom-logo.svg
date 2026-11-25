@@ -1,0 +1,7 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Знак ДаДом</title>
+  <desc id="desc">Стилизованный дом</desc>
+  <path d="M3.5 20.3 20.8 5.5 38.1 20.3V36.5H3.5V20.3Z" fill="#2D3A31"/>
+  <path d="M9.4 19.5 20.8 9.8 32.2 19.5V31.4H9.4V19.5Z" fill="#F9F8F6"/>
+  <path d="M18.1 23.6H23.5V31.4H18.1V23.6Z" fill="#C2593F"/>
+</svg>

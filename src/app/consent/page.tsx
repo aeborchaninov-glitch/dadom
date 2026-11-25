@@ -1,0 +1,3 @@
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata("Согласие на обработку персональных данных", "Отдельное согласие на обработку персональных данных ДаДом. Текст готовится к согласованию.", "/consent", false);
+export default function ConsentPage() { return <><section className="page-intro"><div className="wrap max-w-4xl"><p className="eyebrow">Юридическая информация</p><h1 className="display page-intro__title mt-5">Согласие на обработку персональных данных</h1><p className="muted mt-5 max-w-2xl leading-8">Текст согласия будет добавлен после юридического согласования и подключения работающих форм.</p></div></section></>; }

@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Дом</title>
+  <path d="M6 22.5 24 7l18 15.5" stroke="#2D3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.5 20.5V39h27V20.5" fill="#F9F8F6" stroke="#2D3A31" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M19 39V28h10v11" fill="#C2593F"/>
+  <path d="M15.5 25.5h3" stroke="#2D3A31" stroke-width="2" stroke-linecap="round"/>
+  <path d="M29.5 25.5h3" stroke="#2D3A31" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="39" cy="10" r="4" fill="#C2593F"/>
+</svg>

@@ -1,0 +1,9 @@
+# Static hosting protection for internal UI fixtures. A `noindex` directive is
+# not access control, so Apache returns 404 before it can serve these files.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^visual-preview(?:/|$) - [R=404,L]
+</IfModule>
+
+# Redirects are configured at the hosting level. This file intentionally has
+# no catch-all rewrite, preventing loops for static files such as /robots.txt.

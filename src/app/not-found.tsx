@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <section className="section"><div className="wrap max-w-2xl"><p className="eyebrow">Ошибка 404</p><h1 className="display mt-4 text-5xl">Страница не найдена</h1><p className="muted mt-6 leading-7">Возможно, адрес изменился или материал ещё не опубликован.</p><div className="mt-8 flex flex-wrap gap-3"><Link className="button" href="/projects">Проекты домов</Link><Link className="button button--light" href="/">На главную</Link></div></div></section>;}

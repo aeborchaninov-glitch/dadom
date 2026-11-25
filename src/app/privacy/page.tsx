@@ -1,0 +1,3 @@
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata("Политика обработки персональных данных", "Страница политики обработки персональных данных ДаДом. Текст готовится к согласованию.", "/privacy", false);
+export default function PrivacyPage() { return <><section className="page-intro"><div className="wrap max-w-4xl"><p className="eyebrow">Юридическая информация</p><h1 className="display page-intro__title mt-5">Политика обработки персональных данных</h1><p className="muted mt-5 max-w-2xl leading-8">Текст политики должен быть подготовлен и согласован владельцем компании и профильным специалистом до публикации.</p></div></section></>; }
