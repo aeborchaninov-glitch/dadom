@@ -10,5 +10,5 @@ export function Works({ title, items }: { title: string; items: string[] }) {
 }
 
 export function PackageCard({ item, projectSlug }: { item: Complectation; projectSlug?: string }) {
-  return <article className="package-card card p-6"><h3 className="display text-3xl">{item.name}</h3><p className="muted mt-3 leading-7">{item.description}</p><div className="mt-6 grid gap-6 sm:grid-cols-2"><Works title="Включено" items={item.includedWorks} /><Works title="Не включено" items={item.excludedWorks} /></div>{projectSlug && <Link className="button button--light mt-6" href={`/contacts?project=${encodeURIComponent(projectSlug)}&package=${encodeURIComponent(item.id)}`}>Выбрать комплектацию</Link>}</article>;
+  return <article className="package-card card p-6"><h3 className="display text-3xl">{item.name}</h3><p className="muted mt-3 leading-7">{item.description}</p><div className={`mt-6 grid gap-6 ${item.excludedWorks.length ? "sm:grid-cols-2" : ""}`}><Works title="Включено" items={item.includedWorks} />{item.excludedWorks.length > 0 && <Works title="Не включено" items={item.excludedWorks} />}</div>{projectSlug && <Link className="button button--light mt-6" href={`/contacts?project=${encodeURIComponent(projectSlug)}&package=${encodeURIComponent(item.id)}`}>Выбрать комплектацию</Link>}</article>;
 }
