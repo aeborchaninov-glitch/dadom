@@ -33,3 +33,21 @@ export type TechnologyEntry = EditorialEntry & {
   relatedProjectSlugs: string[];
   relatedPackageIds: string[];
 };
+
+export type TechnologyTopic = {
+  slug: string;
+  title: string;
+  seoTitle: string;
+  seoDescription: string;
+  h1: string;
+  excerpt: string;
+  intro: string;
+  keyPoints: string[];
+  faq: FaqItem[];
+  published: boolean;
+  indexable: boolean;
+  relatedTopics: string[];
+  heroImage: ImageAsset | null;
+  hotspotLabel: string;
+  hotspot: { x: number; y: number };
+};

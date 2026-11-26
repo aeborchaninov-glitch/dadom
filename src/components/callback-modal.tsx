@@ -9,6 +9,7 @@ type CallbackModalProps = {
   open: boolean;
   onClose: () => void;
   returnFocusRef: RefObject<HTMLButtonElement | null>;
+  source?: "header_callback" | "technology_cta";
 };
 
 const phonePattern = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
@@ -24,7 +25,7 @@ function formatPhone(value: string) {
   return `+7 (${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 8)}-${digits.slice(8)}`;
 }
 
-export function CallbackModal({ open, onClose, returnFocusRef }: CallbackModalProps) {
+export function CallbackModal({ open, onClose, returnFocusRef, source = "header_callback" }: CallbackModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const [name, setName] = useState("");
@@ -90,11 +91,12 @@ export function CallbackModal({ open, onClose, returnFocusRef }: CallbackModalPr
 
     setIsSubmitting(true);
     trackAnalyticsEvent("lead_submit");
+    if (source === "technology_cta") trackAnalyticsEvent("technology_cta_submit");
     try {
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), phone, source: "header_callback" }),
+        body: JSON.stringify({ name: name.trim(), phone, source }),
       });
       if (!response.ok) throw new Error("Lead endpoint rejected the request");
       setSubmitted(true);

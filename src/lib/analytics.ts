@@ -1,6 +1,6 @@
 "use client";
 
-export type AnalyticsEvent = "callback_open" | "phone_click" | "package_select" | "project_view" | "lead_submit" | "lead_success";
+export type AnalyticsEvent = "callback_open" | "phone_click" | "package_select" | "project_view" | "lead_submit" | "lead_success" | "technology_cta_click" | "technology_cta_submit" | "technology_topic_click" | "technology_hotspot_click";
 
 type AnalyticsWindow = Window & {
   ym?: (counterId: number, action: "reachGoal", goal: AnalyticsEvent) => void;
