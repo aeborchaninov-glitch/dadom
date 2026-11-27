@@ -45,7 +45,7 @@ function AdvantageIcon({ icon }: { icon: (typeof advantages)[number]["icon"] }) 
 export function TechnologyLanding() {
   return <div className="technology-page">
     <section className="technology-overview-hero">
-      <Image src="/images/technology-frame-hero-v2.png" alt="Каркасный дом с открытой конструкцией в туманном хвойном лесу" fill priority sizes="100vw" className="object-cover" />
+      <Image src="/images/technology-frame-hero-v2.png" alt="Каркасный дом с открытой конструкцией в туманном хвойном лесу" fill priority sizes="100vw" className="technology-overview-hero__image object-contain object-right" />
       <div className="technology-overview-hero__veil" />
       <div className="wrap technology-overview-hero__content">
         <h1 className="display">Технология строительства каркасных домов</h1>

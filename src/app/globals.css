@@ -345,8 +345,8 @@ footer .eyebrow::before, .dark-surface .eyebrow::before { background: var(--sand
 
 /* Technology overview — local approval draft */
 .technology-page { background: var(--paper); padding-bottom: clamp(48px, 7vw, 96px); }
-.technology-overview-hero { position: relative; display: flex; min-height: clamp(400px, 36vw, 560px); align-items: end; overflow: hidden; background: var(--forest); color: var(--white); }
-.technology-overview-hero__veil { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(17,29,24,.78) 0%, rgba(17,29,24,.6) 37%, rgba(17,29,24,.26) 65%, rgba(17,29,24,.06) 100%), linear-gradient(0deg, rgba(17,29,24,.48), transparent 70%); }
+.technology-overview-hero { position: relative; display: flex; min-height: clamp(400px, 36vw, 560px); align-items: end; overflow: hidden; background: linear-gradient(90deg, #182820 0%, #263b31 52%, #4f5d56 100%); color: var(--white); }
+.technology-overview-hero__veil { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(17,29,24,.72) 0%, rgba(17,29,24,.55) 43%, rgba(17,29,24,.18) 66%, rgba(17,29,24,.02) 100%); }
 .technology-overview-hero__content { position: relative; z-index: 1; padding: 142px 0 62px; }
 .technology-overview-hero h1 { max-width: 690px; font-size: clamp(2.5rem, 3.4vw, 3.3rem); line-height: 1.03; letter-spacing: -.05em; color: var(--white); }
 .technology-overview-hero p { max-width: 575px; margin-top: 18px; color: rgba(255,255,255,.92); font-size: clamp(.98rem, 1.12vw, 1.08rem); line-height: 1.6; }
@@ -406,6 +406,7 @@ footer .eyebrow::before, .dark-surface .eyebrow::before { background: var(--sand
 @media (max-width: 1023px) { .technology-advantages { grid-template-columns: repeat(2,minmax(0,1fr)); } .technology-solutions { grid-template-columns: repeat(2,minmax(0,1fr)); } .technology-stages { grid-template-columns: repeat(3,minmax(0,1fr)); } }
 @media (max-width: 639px) {
   .technology-overview-hero { min-height: 430px; }
+  .technology-overview-hero__image { object-fit: cover; }
   .technology-overview-hero__content { padding: 120px 0 42px; }
   .technology-overview-hero h1 { font-size: clamp(1.9rem, 8.6vw, 2.2rem); }
   .technology-overview-hero p { margin-top: 18px; font-size: .97rem; }
