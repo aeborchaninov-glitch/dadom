@@ -27,19 +27,22 @@
 
 ## Информационный кластер «Технологии»
 
-| Тема | Частотность | Плановый маршрут | Статус |
-| --- | ---: | --- | --- |
-| Стена каркасного дома | 984 | `/technology/steny` | черновик, noindex и вне sitemap |
-| Пол в каркасном доме | 634 | `/technology/pol` | черновик, noindex и вне sitemap |
-| Утепление каркасного дома | 498 | `/technology/uteplenie` | черновик, noindex и вне sitemap |
-| Крыша каркасного дома | 290 | `/technology/krovlya` | черновик, noindex и вне sitemap |
-| Тёплый пол в каркасном доме | 204 | `/technology/teplyy-pol` | черновик, noindex и вне sitemap |
-| Вентиляция в каркасном доме | 119 | `/technology/ventilyatsiya` | черновик, noindex и вне sitemap |
+`/technology/` — единая публичная обзорная страница технологии. Конструктивные элементы раскрываются на ней же через уникальные якоря; отдельные индексируемые URL для каждой темы не создаются.
 
-Полная черновая архитектура: `/technology/steny`, `/technology/pol`, `/technology/uteplenie`, `/technology/krovlya`, `/technology/teplyy-pol`, `/technology/okna`, `/technology/ventilyatsiya`, `/technology/fasad`, `/technology/karkas`, `/technology/paroizolyatsiya`, `/technology/perekrytiya`, `/technology/fundament`, `/technology/vetrozashchita`, `/technology/otoplenie`.
+| Конструктивный элемент | Поисковая тема | Частотность | Публичная точка входа |
+| --- | --- | ---: | --- |
+| Фундамент | Фундамент каркасного дома | — | `/technology/#fundament` |
+| Силовой каркас | Каркас каркасного дома | — | `/technology/#karkas` |
+| Стены и утепление | Стена каркасного дома / утепление каркасного дома | 984 / 498 | `/technology/#steny-i-uteplenie` |
+| Пол и перекрытия | Пол в каркасном доме | 634 | `/technology/#pol-i-perekrytiya` |
+| Кровля | Крыша каркасного дома | 290 | `/technology/#krovlya` |
+| Фасады | Фасад каркасного дома | — | `/technology/#fasady` |
+| Окна и двери | Окна и двери каркасного дома | — | `/technology/#okna-i-dveri` |
+| Инженерные системы | Вентиляция / тёплый пол в каркасном доме | 119 / 204 | `/technology/#inzhenernye-sistemy` |
 
-Существующие черновики `/technology/inzhenernye-sistemy` и `/technology/dom-dlya-urala` сохранены. После анализа выдачи близкие темы могут быть объединены: например, инженерные системы — с отоплением, вентиляцией и тёплым полом. Публиковать пересекающиеся страницы без самостоятельной ценности нельзя.
+В целевой реализации раскрывающийся текст каждой темы находится в исходном HTML `/technology/` и не запрашивается после взаимодействия. Прямые ссылки с якорями открывают соответствующий раздел на той же канонической странице; они не являются самостоятельными индексируемыми URL.
 
+Полная архитектура тематических черновиков сохранена для дальнейшей редакционной работы: `/technology/steny`, `/technology/pol`, `/technology/uteplenie`, `/technology/krovlya`, `/technology/teplyy-pol`, `/technology/okna`, `/technology/ventilyatsiya`, `/technology/fasad`, `/technology/karkas`, `/technology/paroizolyatsiya`, `/technology/perekrytiya`, `/technology/fundament`, `/technology/vetrozashchita`, `/technology/otoplenie`. Эти маршруты не генерируются как публичные страницы, не включаются в sitemap и возвращают 404 до отдельного решения о публикации.
 ## Публикационная логика
 
 | URL | Назначение | Индексация | Условие публикации |
@@ -51,7 +54,7 @@
 | `/portfolio` | Реализованные дома | да | есть опубликованные кейсы |
 | `/portfolio/[slug]` | Кейс | да | запись `published` |
 | `/complectations` | Комплектации | да | согласованное содержимое |
-| `/technology` | Обзор технологии | да после визуального утверждения | обзорная страница, canonical и sitemap |
+| `/technology` | Единый обзор технологии с якорями конструктивных элементов | да | canonical и sitemap; подробные блоки присутствуют в HTML |
 | `/technology/[slug]` | Техническая статья | нет, пока черновик | автор, проверка, источники и `published` |
 | `/articles` | Блог | да | есть опубликованная статья |
 | `/articles/[slug]` | Статья | да | автор, дата, источники и `published` |
