@@ -13,4 +13,5 @@
   RewriteRule ^(?:projects|portfolio)/__empty(?:/|$) - [R=404,L]
   RewriteRule ^projects/category/__empty(?:/|$) - [R=404,L]
   RewriteRule ^(?:articles|technology)/__not-published(?:/|$) - [R=404,L]
+  RewriteRule ^technology/(?:steny|pol|uteplenie|krovlya|teplyy-pol|okna|ventilyatsiya|fasad|karkas|paroizolyatsiya|perekrytiya|fundament)(?:/|$) - [R=404,L]
 </IfModule>
