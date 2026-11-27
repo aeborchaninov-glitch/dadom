@@ -2,10 +2,10 @@ import Image from "next/image";
 import { CallbackTrigger } from "./callback-trigger";
 
 const advantages = [
-  { icon: "heat", title: "Энергоэффективность", text: "Тепловой контур продумывают как единую систему стен, пола, кровли, окон и вентиляции." },
-  { icon: "speed", title: "Скорость строительства", text: "Каркасная технология позволяет последовательно вести работы и планировать следующий этап заранее." },
-  { icon: "plan", title: "Свобода архитектуры", text: "Планировка, окна, террасы и внешний облик дома увязываются с конструкцией ещё на стадии проекта." },
-  { icon: "home", title: "Комфорт проживания", text: "Продуманная конструкция помогает создать спокойное, светлое и удобное пространство для жизни круглый год." },
+  { icon: "wallet", title: "Разумная стоимость", text: "Лёгкая конструкция и рациональное использование материалов позволяют сократить затраты на строительство дома." },
+  { icon: "timer", title: "Быстрое строительство", text: "Сборка каркаса не требует длительного ожидания усадки, как у сруба. Можно быстрее перейти к отделке и новоселью." },
+  { icon: "thermometer", title: "Меньше затрат на отопление", text: "Эффективное утепление стен, пола и кровли помогает сохранять тепло зимой и снижать расходы на отопление." },
+  { icon: "home", title: "Современная архитектура", text: "Панорамные окна, высокие потолки, просторные кухни-гостиные, второй свет и уютные террасы." },
 ] as const;
 
 const solutions = [
@@ -36,16 +36,16 @@ const questions = [
 
 function AdvantageIcon({ icon }: { icon: (typeof advantages)[number]["icon"] }) {
   const base = { fill: "none", stroke: "currentColor", strokeWidth: 1.7, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
-  if (icon === "heat") return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="M16 4v24M8.5 7.5c3 3.4 3 13.6 0 17M23.5 7.5c-3 3.4-3 13.6 0 17" /></svg>;
-  if (icon === "speed") return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="M18.5 3 7 17h8l-1.5 12L25 15h-8z" /></svg>;
-  if (icon === "plan") return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="M5 6h22v20H5zM11 6v8h8V6M5 20h8v6M20 18h7" /></svg>;
-  return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="m4 15 12-10 12 10v12H19v-8h-6v8H4z" /></svg>;
+  if (icon === "wallet") return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="M5 9.5h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2Z" /><path {...base} d="M5 9.5V7a2 2 0 0 1 2-2h16M22 17h5M22 17a2 2 0 1 0 0 4h5" /></svg>;
+  if (icon === "timer") return <svg viewBox="0 0 32 32" aria-hidden="true"><circle {...base} cx="16" cy="18" r="10" /><path {...base} d="M16 8V4M12 4h8M16 18l4-3M23 9l2-2" /></svg>;
+  if (icon === "thermometer") return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="M14 6a3 3 0 0 1 6 0v12.4a6 6 0 1 1-6 0Z" /><path {...base} d="M17 11v10M17 24h.01" /></svg>;
+  return <svg viewBox="0 0 32 32" aria-hidden="true"><path {...base} d="m4 15 12-10 12 10v12H19v-8h-6v8H4zM21 5v6" /></svg>;
 }
 
 export function TechnologyLanding() {
   return <div className="technology-page">
     <section className="technology-overview-hero">
-      <Image src="/images/technology-frame-hero-v2.png" alt="Каркасный дом с открытой конструкцией в туманном хвойном лесу" fill priority sizes="100vw" className="technology-overview-hero__image object-contain object-right" />
+      <Image src="/images/technology-frame-hero-v2.png" alt="Каркасный дом с открытой конструкцией в туманном хвойном лесу" fill priority sizes="100vw" className="technology-overview-hero__image object-cover object-center" />
       <div className="technology-overview-hero__veil" />
       <div className="wrap technology-overview-hero__content">
         <h1 className="display">Технология строительства каркасных домов</h1>
@@ -54,7 +54,7 @@ export function TechnologyLanding() {
     </section>
 
     <section className="technology-section"><div className="wrap">
-      <div className="technology-section__heading"><h2 className="display">Почему каркасная технология</h2><p>Дом — это цельная система, в которой архитектура, конструктив и инженерия работают вместе.</p></div>
+      <div className="technology-section__heading"><h2 className="display">Почему выбирают каркасные дома</h2><p>Каркасная технология сочетает разумную стоимость строительства, короткие сроки, энергоэффективность и возможности современной архитектуры.</p></div>
       <div className="technology-advantages">{advantages.map((item) => <article key={item.title} className="technology-advantage"><div className="technology-advantage__icon"><AdvantageIcon icon={item.icon} /></div><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
     </div></section>
 
