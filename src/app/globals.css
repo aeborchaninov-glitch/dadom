@@ -388,10 +388,8 @@ footer .eyebrow::before, .dark-surface .eyebrow::before { background: var(--sand
 .technology-solution-detail__gallery figure { position: relative; min-height: 240px; overflow: hidden; border-radius: var(--radius-sm); background: var(--sage); }
 @keyframes technology-detail-reveal { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 .technology-climate { display: grid; gap: clamp(28px, 5vw, 68px); align-items: center; }
-.technology-photo-request { display: flex; min-height: 360px; flex-direction: column; align-items: flex-start; justify-content: end; border: 1px dashed rgba(50,72,61,.35); border-radius: var(--radius-lg); background: linear-gradient(145deg, #dce6dd, #bfcfbe); padding: clamp(24px,4vw,42px); color: var(--forest); }
-.technology-photo-request span { border-radius: 999px; background: rgba(194,89,63,.13); padding: 7px 10px; color: #A84830; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.technology-photo-request strong { max-width: 310px; margin-top: 15px; font-size: clamp(1.4rem,2.3vw,2rem); line-height: 1.15; }
-.technology-photo-request small { margin-top: 9px; color: #57534E; font-size: .8rem; }
+.technology-climate__image { position: relative; min-height: 360px; overflow: hidden; border: 1px solid rgba(50,72,61,.12); border-radius: var(--radius-lg); background: var(--sage); }
+.technology-climate__image img { object-position: center 42%; }
 .technology-climate__copy { max-width: 570px; }
 .technology-climate__copy h2 { margin-top: 18px; }
 .technology-climate__copy > p:not(.eyebrow) { margin-top: 20px; color: var(--muted); line-height: 1.72; }
@@ -431,7 +429,7 @@ footer .eyebrow::before, .dark-surface .eyebrow::before { background: var(--sand
   .technology-solutions { gap: 12px; margin-top: 28px; }
   .technology-solutions__row { grid-template-columns: 1fr; gap: 12px; }
   .technology-advantage, .technology-solution__body { padding: 20px; }
-  .technology-photo-request { min-height: 290px; }
+  .technology-climate__image { min-height: 290px; }
   .technology-solution-detail__foundation, .technology-solution-detail__gallery { grid-template-columns: 1fr; }
   .technology-solution-detail__inner { padding: 24px 20px; }
   .technology-solution-detail__gallery figure { min-height: 200px; }
