@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CallbackTrigger } from "./callback-trigger";
+import { TechnologySolutions } from "./technology-solutions";
 
 const advantages = [
   { icon: "wallet", title: "Разумная стоимость", text: "Лёгкая конструкция и рациональное использование материалов позволяют сократить затраты на строительство дома." },
@@ -8,14 +9,7 @@ const advantages = [
   { icon: "home", title: "Современная архитектура", text: "Панорамные окна, высокие потолки, просторные кухни-гостиные, второй свет и уютные террасы." },
 ] as const;
 
-const solutions = [
-  { title: "Фундамент", image: "/images/editorial/construction.webp", alt: "Строительные работы на загородном доме", text: "Основание дома выбирают после изучения участка и проекта. Фундамент связывает рельеф, будущую нагрузку и конструкцию первого этажа." },
-  { title: "Силовой каркас", image: "/images/editorial/timber-frame.webp", alt: "Деревянный каркас загородного дома", text: "Деревянный каркас задаёт геометрию и несущую схему дома. На этапе проектирования в нём учитывают планировку, проёмы и кровельное решение." },
-  { title: "Стены и утепление", image: "/images/editorial/insulation.webp", alt: "Монтаж утепления в каркасной конструкции", text: "Стена объединяет каркас, утепляющий контур, защитные и отделочные слои. Их работа зависит от последовательности монтажа и грамотных примыканий." },
-  { title: "Кровля и фасад", image: "/images/editorial/modern-house.webp", alt: "Современный загородный дом с фасадом и кровлей", text: "Кровля и фасад защищают дом от осадков и формируют его характер. Решения подбирают вместе с архитектурой, утеплением и условиями участка." },
-  { title: "Окна и двери", image: "/images/editorial/panoramic-house.webp", alt: "Дом с панорамными окнами", text: "Оконные и дверные проёмы влияют на свет, вид из дома и комфорт. Их размещение согласовывают с конструкцией стен, фасадом и планировкой." },
-  { title: "Инженерные системы", image: "/images/editorial/interior.webp", alt: "Светлый интерьер загородного дома", text: "Отопление, водоснабжение, электрика и вентиляция проектируются как часть общего сценария жизни в доме. Это позволяет заранее предусмотреть удобные решения для помещений." },
-] as const;
+
 
 const stages = [
   ["01", "Проектирование", "/images/editorial/terrace.webp", "Планировка, архитектура и конструктивная логика дома."],
@@ -60,7 +54,7 @@ export function TechnologyLanding() {
 
     <section className="technology-section technology-section--paper"><div className="wrap">
       <div className="technology-section__heading"><h2 className="display">Конструктивные решения и материалы</h2><p>Ключевые части дома рассматриваются вместе: от основания и каркаса до инженерных систем и внутреннего пространства.</p></div>
-      <div className="technology-solutions">{solutions.map((item) => <article key={item.title} className="technology-solution"><div className="technology-solution__image"><Image src={item.image} alt={item.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" /></div><div className="technology-solution__body"><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+      <TechnologySolutions />
     </div></section>
 
     <section className="technology-section"><div className="wrap">
