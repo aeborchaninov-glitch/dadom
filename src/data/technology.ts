@@ -12,8 +12,10 @@ const makeFaq = (title: string, lead: string): FaqItem[] => [
 const topic = ({ faqLead, ...entry }: TopicInput): TechnologyTopic => ({
   ...entry,
   faq: makeFaq(entry.title, faqLead),
-  published: true,
-  indexable: true,
+  // The topical routes are editorial drafts retained for future development.
+  // They are intentionally excluded from route generation, sitemap and links.
+  published: false,
+  indexable: false,
   heroImage: null,
 });
 

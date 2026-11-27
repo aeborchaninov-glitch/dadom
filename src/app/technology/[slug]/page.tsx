@@ -4,7 +4,9 @@ import { pageMetadata } from "@/lib/seo";
 import { TechnologyDetail } from "@/components/technology-detail";
 
 export const dynamicParams = false;
-export function generateStaticParams() { return publishedTechnology.map(({ slug }) => ({ slug })); }
+export function generateStaticParams() {
+  return publishedTechnology.length ? publishedTechnology.map(({ slug }) => ({ slug })) : [{ slug: "__not-published" }];
+}
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const entry = getTechnology((await params).slug);
   if (!entry) notFound();

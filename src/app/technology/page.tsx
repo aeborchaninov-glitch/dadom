@@ -1,9 +1,8 @@
 import { pageMetadata } from "@/lib/seo";
-import { indexableTechnology } from "@/data/technology";
 import { TechnologyLanding } from "@/components/technology-landing";
 
-export const metadata = pageMetadata("Технология строительства каркасных домов", "Как устроен каркасный дом: конструктив, утепление, полы, кровля, окна и инженерные решения. ДаДом, Екатеринбург.", "/technology/", true);
+export const metadata = pageMetadata("Технология строительства каркасных домов в Екатеринбурге", "Как устроен каркасный дом: фундамент, деревянный каркас, стены, утепление, кровля и инженерные системы. Особенности строительства в климатических условиях Урала", "/technology/", true);
 
 export default function TechnologyPage() {
-  return <TechnologyLanding topics={indexableTechnology} />;
+  return <TechnologyLanding />;
 }
